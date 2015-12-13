@@ -8,7 +8,7 @@ import urllib2
 import collections
 from bs4 import BeautifulSoup
 import pickle
-import sentiment_analysis_python.sentiment_analysis as sa
+import sentiment_analysis_py.sentiment_analysis as sa
 import re
 import os
 
@@ -165,7 +165,7 @@ def update_training_files_filter(running_data):
                     if 'added_2_filter' not in running_data[day][sym][article]:
                         running_data[day][sym][article]['added_2_filter'] = 0
                     if day < str(five_days_ago) and not running_data[day][sym][article]['added_2_filter']:
-                        with open('sentiment_analysis_python/training_data/pos_train_content.txt', 'a') as fout:
+                        with open('sentiment_analysis_py/training_data/pos_train_content.txt', 'a') as fout:
                             print >> fout, running_data[day][sym][article]['text']
                             running_data[day][sym][article]['added_2_filter'] = 1
                             print "AddedP: " + str(day) + " " + str(sym) + " " + str(article)
@@ -175,7 +175,7 @@ def update_training_files_filter(running_data):
                     if 'added_2_filter' not in running_data[day][sym][article]:
                         running_data[day][sym][article]['added_2_filter'] = 0
                     if day < str(five_days_ago) and not running_data[day][sym][article]['added_2_filter']:
-                        with open('sentiment_analysis_python/training_data/neg_train_content.txt', 'a') as fout:
+                        with open('sentiment_analysis_py/training_data/neg_train_content.txt', 'a') as fout:
                             print >> fout, running_data[day][sym][article]['text']
                             running_data[day][sym][article]['added_2_filter'] = 1
                             print "AddedN: " + str(day) + " " + str(sym) + " " + str(article)
