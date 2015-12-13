@@ -1,0 +1,15 @@
+set terminal jpeg enhanced font "Helvetica,10"
+set title "Correctly Predicted"
+set ylabel "Score"
+set output 'correct.jpg'
+set xtics rotate by 90 right
+set yrange[-9:9]
+plot correct using 1:xtic(2) with points
+replot
+set title "Incorrectly Predicted"
+set ylabel "Score"
+set output 'incorrect.jpg'
+set xtics rotate by 90 right
+set yrange[-9:9]
+plot incorrect using 1:xtic(2) with points
+replot

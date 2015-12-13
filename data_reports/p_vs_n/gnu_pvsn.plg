@@ -1,0 +1,9 @@
+set terminal jpeg enhanced font "Helvetica,10"
+set title "Number of Positive vs Negative Articles by Day"
+set xlabel "Positive Articles"
+set ylabel "Negative Articles"
+set output 'comparison.jpg'
+set xrange[-1:10]
+set yrange[-1:10]
+plot pos_file with points, neg_file with points
+replot

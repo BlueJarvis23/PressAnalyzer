@@ -1,0 +1,1 @@
+gnuplot -e "pos_file='allpoints_p.txt'" -e "neg_file='allpoints_n.txt'" gnu_pvsn.plg

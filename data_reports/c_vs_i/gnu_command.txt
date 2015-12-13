@@ -1,0 +1,1 @@
+gnuplot -e "correct='allpoints_p.txt'" -e "incorrect='allpoints_n.txt'" gnu_cvsi.plg
