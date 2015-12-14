@@ -5,5 +5,5 @@ set ylabel "Negative Articles"
 set output 'comparison.jpg'
 set xrange[-1:10]
 set yrange[-1:10]
-plot pos_file with points, neg_file with points
+plot pos_file with points title "Correctly Predicted", neg_file with points title "Incorrectly Predicted"
 replot
